@@ -1,22 +1,19 @@
 import random
 
-# LIST 1: Spider-Man facts
 funFacts = [
-    "Spider-Man's real name is Peter Parker.",
-    "He was bitten by a radioactive spider.",
-    "He lives in New York City.",
-    "His motto is: 'With great power comes great responsibility.'",
-    "He fights villains like Green Goblin and Doctor Octopus."
+    "I'm actually Peter Parker.",
+    "I was bitten by a radioactive spider.",
+    "I live in New York City.",
+    "My uncles motto is: 'With great power comes great responsibility.'",
+    "I fight crazy bad villains like Green Goblin and Doctor Octopus."
 ]
 
-# LIST 2: Greetings
 greetings = [
     "Hey there, citizen!",
-    "What's up! 🕷️",
+    "What's up!",
     "Hello! Ready to save the city?"
 ]
 
-# LIST 3: Villains
 villains = [
     "Green Goblin",
     "Doctor Octopus",
@@ -24,7 +21,6 @@ villains = [
     "Sandman"
 ]
 
-# PROCEDURE
 def response(input):
     input = input.lower()
 
@@ -32,7 +28,7 @@ def response(input):
         return random.choice(greetings)
 
     elif "who are you" in input:
-        return "I'm Peter Parker! Or... Spider-Man as I'm famously known as."
+        return "I'm Spider-Man! Or... Peter Parker as some know me as."
 
     elif "fact" in input:
         response = "Here are some fun facts about me!:\n"
@@ -41,7 +37,7 @@ def response(input):
         return response
 
     elif "villain" in input:
-        response = "Here are some Spider-Man villains:\n"
+        response = "Here are some of my villains:\n"
         for v in villains:
             response = response + "- " + v + "\n"
         return response
@@ -61,10 +57,10 @@ def response(input):
         return action + enemy + "!"
 
     elif "bye" in input:
-        return "See you later! Stay safe, citizen!"
+        return "See you later! Stay safe, weird citizen!"
 
     else:
-        return "I don't understand that. Try asking in a different way!"
+        return "Hold on I'm not all knowing like Mr. Richards!"
 
 
 # MAIN PROGRAM
@@ -76,7 +72,7 @@ while True:
 
     spiderSponse = response(usersResponse)
 
-    print("Spider-Man Bot:", spiderSponse)
+    print("Spider-Man:", spiderSponse)
 
     if "bye" in usersResponse.lower():
         break
